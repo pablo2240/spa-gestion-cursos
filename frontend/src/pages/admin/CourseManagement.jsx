@@ -12,7 +12,7 @@ import {
 } from '@mui/material';
 import { Edit, Delete } from '@mui/icons-material';
 import { courseService } from '../../services/courseService';
-import CourseForm from '../../components/admin/CourseForm';
+import CourseForm from '../../components/courses/CourseForm'
 import Loading from '../../components/common/Loading';
 
 const CourseManagement = () => {
