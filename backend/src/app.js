@@ -30,13 +30,14 @@ app.use(cors({
 }));
 
 // Rate limiting
-const limiter = rateLimit({
-  windowMs: 15 * 60 * 1000, // 15 minutos
-  max: 100, // límite de 100 peticiones por ventana
-  message: 'Demasiadas peticiones desde esta IP, intenta de nuevo más tarde'
-});
+// const limiter = rateLimit({
+//   windowMs: 15 * 60 * 1000, // 15 minutos
+//   max: 1000, // límite de 1000 peticiones (más alto para desarrollo)
+//   message: 'Demasiadas peticiones desde esta IP, intenta de nuevo más tarde',
+//   skip: (req) => process.env.NODE_ENV === 'development' // Desactivar en desarrollo
+// });
 
-app.use('/api/', limiter);
+// app.use('/api/', limiter);
 
 // Body parser
 app.use(express.json());
