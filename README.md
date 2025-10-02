@@ -60,6 +60,7 @@ Plataforma web tipo SPA (Single Page Application) que permite administrar de man
 
 #### 📋 Credenciales de prueba:
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
 *Administrador:*
   **Email:** admin@sena.edu.co
   **Password:** admin123
