@@ -7,30 +7,29 @@ export const NotificationProvider = ({ children }) => {
   const [notification, setNotification] = useState({
     open: false,
     message: '',
-    severity: 'info',
+    severity: 'info'
   });
 
   const showNotification = (message, severity = 'info') => {
     setNotification({
       open: true,
       message,
-      severity,
+      severity
     });
   };
 
   const handleClose = () => {
-    setNotification((prev) => ({ ...prev, open: false }));
+    setNotification(prev => ({ ...prev, open: false }));
   };
 
   return (
     <NotificationContext.Provider value={{ showNotification }}>
       {children}
-
       <Snackbar
         open={notification.open}
-        autoHideDuration={4000}
+        autoHideDuration={6000}
         onClose={handleClose}
-        anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
+        anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
       >
         <Alert onClose={handleClose} severity={notification.severity} sx={{ width: '100%' }}>
           {notification.message}

@@ -8,7 +8,7 @@ export const AuthProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const initAuth = async () => {
+    const initAuth = () => {
       const currentUser = authService.getCurrentUser();
       if (currentUser) {
         setUser(currentUser);
@@ -44,7 +44,11 @@ export const AuthProvider = ({ children }) => {
     isAuthenticated: !!user
   };
 
-  return {children};
+  return (
+    <AuthContext.Provider value={value}>
+      {children}
+    </AuthContext.Provider>
+  );
 };
 
 export const useAuth = () => {

@@ -12,10 +12,12 @@ import StudentDashboard from './pages/student/StudentDashboard';
 import MyCourses from './pages/student/MyCourses';
 import MyTasks from './pages/student/MyTasks';
 import MyGrades from './pages/student/MyGrades';
+import ExploreCourses from './pages/student/ExploreCourses';
 
 // Teacher Pages
 import TeacherDashboard from './pages/teacher/TeacherDashboard';
 import TaskManagement from './pages/teacher/TaskManagement';
+import ManagedCourses from './pages/teacher/ManagedCourses';
 
 // Admin Pages
 import AdminDashboard from './pages/admin/AdminDashboard';
@@ -83,6 +85,14 @@ const AppRouter = () => {
             </ProtectedRoute>
           }
         />
+        <Route
+          path="/student/courses"
+          element={
+            <ProtectedRoute allowedRoles={['estudiante']}>
+              <ExploreCourses />
+            </ProtectedRoute>
+          }
+        />
 
         {/* Teacher Routes */}
         <Route
@@ -98,6 +108,14 @@ const AppRouter = () => {
           element={
             <ProtectedRoute allowedRoles={['profesor']}>
               <TaskManagement />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/teacher/courses"
+          element={
+            <ProtectedRoute allowedRoles={['profesor']}>
+              <ManagedCourses />
             </ProtectedRoute>
           }
         />
