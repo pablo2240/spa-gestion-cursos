@@ -62,16 +62,22 @@ Plataforma web tipo SPA (Single Page Application) que permite administrar de man
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 *Administrador:*
-  **Email:** admin@sena.edu.co
-  **Password:** admin123
+  **Email:** 
+  - admin@sena.edu.co
+  **Password:**
+  - admin123
 
 *Profesor:*
-  **Email:** carlos.rodriguez@sena.edu.co
-  **Password:** profesor123
+  **Email:** 
+  - carlos.rodriguez@sena.edu.co
+  **Password:**
+  - profesor123
 
 *Estudiante:*
-  **Email:** maria.garcia@sena.edu.co
-  **Password:** estudiante123
+  **Email:** 
+  - maria.garcia@sena.edu.co
+  **Password:**
+  - estudiante123
 
 
 ### 🔐 Sistema de Seguridad
